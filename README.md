@@ -12,7 +12,7 @@
 
 App
 
-- git clone https://github.com/14Rahul/Employee-Management-Three-Tier-App.git
+- git clone https://github.com/vikasedu-github/Employee-Management-Three-Tier-JavaApp.git
 - sudo apt-get install maven default-jre
 - vi Employee-Management-Three-Tier-App/springboot-backend/src/main/resources/application.properties and add dbip and port
 	- spring.datasource.url=jdbc:mysql://localhost:3306/kube?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false&user=tom$password=root
