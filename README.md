@@ -2,6 +2,7 @@
 
 - sudo apt update and sudo apt upgrade -y
 - sudo apt-get install mysql-server –y
+- mysql -h <db endpoint> -U <username>
 - sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf
 - Bind IP all
 - sudo mysql -u root -p
