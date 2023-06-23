@@ -21,7 +21,7 @@ App
         - spring.datasource.username= tom
         - spring.datasource.password= root
         - spring.jpa.properties.hibernate.dialect= org.hibernate.dialect.MySQL5InnoDBDial>
-        - # Hibernate ddl auto (create, create-drop, validate, update)
+        - (HASH)Hibernate ddl auto (create, create-drop, validate, update)
         - spring.jpa.hibernate.ddl-auto= update
                     
 - /Employee-Management-Three-Tier-JavaApp/springboot-backend/
