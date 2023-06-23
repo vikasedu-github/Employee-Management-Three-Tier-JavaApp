@@ -34,7 +34,7 @@ Web
 
 - sudo apt-get install npm
 - sudo npm update npm -g
-- vi /Employee-Management-Three-Tier-JavaApp/react-frontend/src/services/EmployeeService.js
+- vi Employee-Management-Three-Tier-JavaApp/react-frontend/src/Services/EmployeeService.js
 	- const EMPLOYEE_API_BASE_URL = "http://localhost:8080/employees";
 - cd /Employee-Management-Three-Tier-JavaApp/react-frontend/
 - npm i
