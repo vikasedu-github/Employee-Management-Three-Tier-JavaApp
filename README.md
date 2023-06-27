@@ -34,6 +34,7 @@
   #Hibernate ddl auto (create, create-drop, validate, update)
   spring.jpa.hibernate.ddl-auto= update
   ```
+- sudo systemctl daemon-reload
 - cd Employee-Management-Three-Tier-JavaApp/springboot-backend/
 - sudo mvn clean install
 - cd Employee-Management-Three-Tier-JavaApp/springboot-backend/target
@@ -76,6 +77,7 @@
   -then save(ctrl+X) and exit(Enter).
   
 - sudo chmod ugo+rwx /etc/systemd/system/app.service
+- sudo systemctl daemon-reload
 - sudo systemctl start app.service
 - sudo systemctl enable app.service
 - sudo systemctl status app.service
@@ -92,6 +94,7 @@ now you can see app port on which it is up.
 - sudo nano Employee-Management-Three-Tier-JavaApp/react-frontend/src/Services/EmployeeService.js  
 - change "Back-IP" with "LB-IP or Frontend Machine-IP"
 - Save(ctrl+X) and Exit(Enter).
+- sudo systemctl daemon-reload
 - cd Employee-Management-Three-Tier-JavaApp/react-frontend
 - under Employee-Management-Three-Tier-JavaApp/react-frontend/  
    - sudo apt-get install npm
@@ -137,6 +140,7 @@ now you can see app port on which it is up.
    ```  
 - then save(ctrl+X) and exit(Enter).
 - sudo chmod ugo+rwx /etc/systemd/system/web.service
+- sudo systemctl daemon-reload
 - sudo systemctl start web.service
 - sudo systemctl enable web.service
 - sudo systemctl status web.service
