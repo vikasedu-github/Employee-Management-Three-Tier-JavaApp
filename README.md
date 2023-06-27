@@ -38,7 +38,7 @@ App
 - sudo mvn clean install
 - cd Employee-Management-Three-Tier-JavaApp/springboot-backend/target
 - sudo nano /etc/systemd/system/app.service
-- if it says folder does not exist then follow below steps under {}
+- if it says folder does not exist then follow below steps under {}  
   {
   -under Employee-Management-Three-Tier-JavaApp/springboot-backend/target/
   ```
