@@ -14,7 +14,9 @@
  ```
  mysql -h "db endpoint or db-name" -u root -p
  ```
+ ```
 - show databases;
+```
 - use kube;(your db name)
 - create user 'tom'@'%' identified by 'root';
 - GRANT ALL PRIVILEGES ON kube.* TO 'tom'@'%';
