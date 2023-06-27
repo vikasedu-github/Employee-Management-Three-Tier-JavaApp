@@ -49,19 +49,20 @@ App
 -}
 - sudo nano /etc/systemd/system/app.service
 - if app.service file opened paste the following code
-  -[Unit]
-  -Description=app
-  -After=network.target
+  ```
+  [Unit]
+  Description=app
+  After=network.target
 
-  -[Service]
-  -User=root
-  -Group=root
-  -ExecStart=java -jar -Djava.net.preferIPv4Stack=true /home/vikas/Employee-Management-Three-Tier-JavaApp/springboot-backend/target/springboot-backend-0.0.1-SNAPSHOT.jar
-  -Restart=always
+  [Service]
+  User=root
+  Group=root
+  ExecStart=java -jar -Djava.net.preferIPv4Stack=true /home/vikas/Employee-Management-Three-Tier-JavaApp/springboot-backend/target/springboot-backend-0.0.1-SNAPSHOT.jar
+  Restart=always
 
-  -[Install]
-  -WantedBy=multi-user.target
-
+  [Install]
+  WantedBy=multi-user.target
+  ```
   -then save(ctrl+X) and exit(Enter).
   
 - sudo chmod ugo+rwx /etc/systemd/system/app.service
