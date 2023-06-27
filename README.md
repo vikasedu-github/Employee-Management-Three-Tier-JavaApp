@@ -1,4 +1,4 @@
-#For source reference visit https://github.com/14Rahul/Employee-Management-Three-Tier-App
+
 # Employee-Management-Three-Tier-JavaApp
 - Make VM for APP Server and Web Server including one MySQL database on AZURE or AWS.
 - If you are creating multiple servers then we will need an Loadbalancer as well.
