@@ -101,14 +101,22 @@ Web
    - sudo nano /etc/systemd/system/web.service
 - if it says folder does not exist then follow the steps mentioned under {} else skip this step  
 - {  
-   under Employee-Management-Three-Tier-JavaApp/react-frontend/  
-     - sudo mkdir etc  
-   under Employee-Management-Three-Tier-JavaApp/react-frontend/etc/  
-     - sudo mkdir systemd
-   under Employee-Management-Three-Tier-JavaApp/react-frontend/systemd/  
-     - sudo mkdir system
-   under Employee-Management-Three-Tier-JavaApp/react-frontend/systemd/system/  
-     - sudo touch web.service  
+   under Employee-Management-Three-Tier-JavaApp/react-frontend/
+    ``` 
+    sudo mkdir etc
+    ```  
+   under Employee-Management-Three-Tier-JavaApp/react-frontend/etc/
+   ```
+   sudo mkdir systemd
+   ```
+   under Employee-Management-Three-Tier-JavaApp/react-frontend/systemd/
+   ``` 
+   sudo mkdir system
+   ```
+   under Employee-Management-Three-Tier-JavaApp/react-frontend/systemd/system/
+   ```
+   sudo touch web.service
+   ``` 
 }  
 - sudo nano /etc/systemd/system/web.service
 - if web.service file opened paste the following code
