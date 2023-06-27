@@ -7,7 +7,7 @@
 - Once VMs is created then login and follow the below steps to deploy this three tier App.
 - Follow APP section for App VM and Web section for WEB VM.
 
-**=============================== App VM Steps ========================================================================**
+**=========================== App VM Steps ===========================**
 
 - sudo apt-get install mysql-server -y
 - mysql -h "db endpoint or db-name" -u root -p
@@ -80,7 +80,7 @@
 now you can see app port on which it is up.
 
 
-**=============================== Web VM Steps =======================================================================**
+**=========================== Web VM Steps ===========================**
 
 - sudo apt update
 - sudo apt upgrade -y
