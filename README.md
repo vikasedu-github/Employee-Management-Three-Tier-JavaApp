@@ -26,12 +26,14 @@ App
 - sudo apt upgrade -y
 - sudo nano Employee-Management-Three-Tier-JavaApp/springboot-backend/src/main/resources/application.properties
 - You will see Output as below, Now change the "db-endpoint" with your database endpoint
-	- spring.datasource.url= jdbc:mysql://"db-endpoint":3306/kube?useSSL=false
-        - spring.datasource.username= tom
-        - spring.datasource.password= root
-        - spring.jpa.properties.hibernate.dialect= org.hibernate.dialect.MySQL5InnoDBDial>
-        - (HASH)Hibernate ddl auto (create, create-drop, validate, update)
-        - spring.jpa.hibernate.ddl-auto= update
+  ```
+  spring.datasource.url= jdbc:mysql://"db-endpoint":3306/kube?useSSL=false
+  spring.datasource.username= tom
+  spring.datasource.password= root
+  spring.jpa.properties.hibernate.dialect= org.hibernate.dialect.MySQL5InnoDBDial>
+  #Hibernate ddl auto (create, create-drop, validate, update)
+  spring.jpa.hibernate.ddl-auto= update
+  ```
 - cd Employee-Management-Three-Tier-JavaApp/springboot-backend/
 - sudo mvn clean install
 - cd Employee-Management-Three-Tier-JavaApp/springboot-backend/target
