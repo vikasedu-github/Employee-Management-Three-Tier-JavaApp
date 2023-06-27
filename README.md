@@ -39,16 +39,24 @@ App
 - cd Employee-Management-Three-Tier-JavaApp/springboot-backend/target
 - sudo nano /etc/systemd/system/app.service
 - if it says folder does not exist then follow below steps under {}
--{
+  {
   -under Employee-Management-Three-Tier-JavaApp/springboot-backend/target/
-     - sudo mkdir etc
+  ```
+  sudo mkdir etc
+  ```
   -under Employee-Management-Three-Tier-JavaApp/springboot-backend/target/etc/
-     - sudo mkdir systemd
+  ```
+  sudo mkdir systemd
+  ```
   -under Employee-Management-Three-Tier-JavaApp/springboot-backend/target/etc/systemd/
-     - sudo mkdir system
+  ```
+  sudo mkdir system
+  ```
   -under Employee-Management-Three-Tier-JavaApp/springboot-backend/target/etc/systemd/system/
-     - sudo touch app.service
--}
+  ```
+  sudo touch app.service
+  ```
+ }
 - sudo nano /etc/systemd/system/app.service
 - if app.service file opened paste the following code
   ```
