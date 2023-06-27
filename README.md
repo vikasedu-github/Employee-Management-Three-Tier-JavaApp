@@ -1,22 +1,18 @@
 #For source reference visit https://github.com/14Rahul/Employee-Management-Three-Tier-App
 # Employee-Management-Three-Tier-JavaApp
+- Make VM for APP Server and Web Server including one MySQL database on AZURE or AWS.
+- If you are creating multiple servers then we will need an Loadbalancer as well.
+- Create one Loadbalancer and configure all the servers and Loadbalancer rules as per your requirements.
+- We will place our VMs behind Loadbalancer
+- Once VMs is created then login and follow the below steps to deploy this three tier App.
+- Follow APP section for App VM and Web section for WEB VM.
 
-- sudo apt update and sudo apt upgrade -y
-- sudo apt-get install mysql-server –y
-- mysql -h "db endpoint" -u "username" -p
-- sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf
-- Bind IP all
-- sudo mysql -u root -p
-- password - root
-- create user 'tom'@'%' identified by 'root';
-- create database kube;
-- GRANT ALL PRIVILEGES ON kube.* TO 'tom'@'%';
-
-App
+**=============================== App VM Steps ========================================================================**
 
 - sudo apt-get install mysql-server -y
 - mysql -h "db endpoint or db-name" -u root -p
 - show databases;
+- use kube;(your db name)
 - create user 'tom'@'%' identified by 'root';
 - GRANT ALL PRIVILEGES ON kube.* TO 'tom'@'%';
 - \q
@@ -84,7 +80,7 @@ App
 now you can see app port on which it is up.
 
 
-Web
+**=============================== Web VM Steps =======================================================================**
 
 - sudo apt update
 - sudo apt upgrade -y
@@ -101,19 +97,19 @@ Web
    - sudo nano /etc/systemd/system/web.service
 - if it says folder does not exist then follow the steps mentioned under {} else skip this step  
 - {  
-   under Employee-Management-Three-Tier-JavaApp/react-frontend/
+   -under Employee-Management-Three-Tier-JavaApp/react-frontend/
     ``` 
     sudo mkdir etc
     ```  
-   under Employee-Management-Three-Tier-JavaApp/react-frontend/etc/
+   -under Employee-Management-Three-Tier-JavaApp/react-frontend/etc/
    ```
    sudo mkdir systemd
    ```
-   under Employee-Management-Three-Tier-JavaApp/react-frontend/systemd/
+   -under Employee-Management-Three-Tier-JavaApp/react-frontend/systemd/
    ``` 
    sudo mkdir system
    ```
-   under Employee-Management-Three-Tier-JavaApp/react-frontend/systemd/system/
+   -under Employee-Management-Three-Tier-JavaApp/react-frontend/systemd/system/
    ```
    sudo touch web.service
    ``` 
