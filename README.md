@@ -7,11 +7,15 @@
 - Once VMs is created then login and follow the below steps to deploy this three tier App.
 - Follow APP section for App VM and Web section for WEB VM.
 
+  **NOTE**
+  - First create an MySQL Database on Azure or AWS then follow below steps..
+
 **=========================== App VM Steps ===========================**   
 
 - sudo apt-get install mysql-server -y
 - mysql -h "db endpoint or db-name" -u root -p
 - show databases;
+- create database kube;
 - use kube;(your db name)
 - create user 'tom'@'%' identified by 'root';
 - GRANT ALL PRIVILEGES ON kube.* TO 'tom'@'%';
