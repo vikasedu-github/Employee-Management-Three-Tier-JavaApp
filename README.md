@@ -38,14 +38,14 @@ App
 - sudo nano /etc/systemd/system/app.service
 - if it says folder does not exist then follow below steps under {}
 -{
-  under Employee-Management-Three-Tier-JavaApp/springboot-backend/target/
-    - sudo mkdir etc
-  under Employee-Management-Three-Tier-JavaApp/springboot-backend/target/etc/
-    - sudo mkdir systemd
-  under Employee-Management-Three-Tier-JavaApp/springboot-backend/target/etc/systemd/
-    - sudo mkdir system
-  under Employee-Management-Three-Tier-JavaApp/springboot-backend/target/etc/systemd/system/
-    - sudo touch app.service
+  -under Employee-Management-Three-Tier-JavaApp/springboot-backend/target/
+     - sudo mkdir etc
+  -under Employee-Management-Three-Tier-JavaApp/springboot-backend/target/etc/
+     - sudo mkdir systemd
+  -under Employee-Management-Three-Tier-JavaApp/springboot-backend/target/etc/systemd/
+     - sudo mkdir system
+  -under Employee-Management-Three-Tier-JavaApp/springboot-backend/target/etc/systemd/system/
+     - sudo touch app.service
 -}
 - sudo nano /etc/systemd/system/app.service
 - if app.service file opened paste the following code
@@ -62,7 +62,7 @@ App
   -[Install]
   -WantedBy=multi-user.target
 
-  then save(ctrl+X) and exit(Enter).
+  -then save(ctrl+X) and exit(Enter).
   
 - sudo chmod ugo+rwx /etc/systemd/system/app.service
 - sudo systemctl start app.service
