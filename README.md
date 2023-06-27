@@ -8,9 +8,12 @@
 - Follow APP section for App VM and Web section for WEB VM.
 
 **=========================== App VM Steps ===========================**
-
-- sudo apt-get install mysql-server -y
-- mysql -h "db endpoint or db-name" -u root -p
+ ```
+ sudo apt-get install mysql-server -y
+ ```
+ ```
+ mysql -h "db endpoint or db-name" -u root -p
+ ```
 - show databases;
 - use kube;(your db name)
 - create user 'tom'@'%' identified by 'root';
