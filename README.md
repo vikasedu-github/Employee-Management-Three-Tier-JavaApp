@@ -7,16 +7,11 @@
 - Once VMs is created then login and follow the below steps to deploy this three tier App.
 - Follow APP section for App VM and Web section for WEB VM.
 
-**=========================== App VM Steps ===========================**
- ```
- sudo apt-get install mysql-server -y
- ```
- ```
- mysql -h "db endpoint or db-name" -u root -p
- ```
- ```
+**=========================== App VM Steps ===========================**   
+
+- sudo apt-get install mysql-server -y
+- mysql -h "db endpoint or db-name" -u root -p
 - show databases;
-```
 - use kube;(your db name)
 - create user 'tom'@'%' identified by 'root';
 - GRANT ALL PRIVILEGES ON kube.* TO 'tom'@'%';
@@ -144,3 +139,7 @@ now you can see app port on which it is up.
 - ss -nltp   
     
 now you can see app port on which it is up.  
+
+
+
+
