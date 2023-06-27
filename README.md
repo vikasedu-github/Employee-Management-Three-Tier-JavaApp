@@ -38,7 +38,7 @@ App
 - sudo mvn clean install
 - cd Employee-Management-Three-Tier-JavaApp/springboot-backend/target
 - sudo nano /etc/systemd/system/app.service
-- if it says folder does not exist then follow below steps under {}  
+- if it says folder does not exist then follow below steps under {} else skip this steps   
   {  
   -under Employee-Management-Three-Tier-JavaApp/springboot-backend/target/
   ```
@@ -86,10 +86,52 @@ now you can see app port on which it is up.
 
 Web
 
-- sudo apt-get install npm
-- sudo npm update npm -g
-- vi Employee-Management-Three-Tier-JavaApp/react-frontend/src/Services/EmployeeService.js
-	- const EMPLOYEE_API_BASE_URL = "http://localhost:8080/employees";
-- cd Employee-Management-Three-Tier-JavaApp/react-frontend/
-- npm i
-- npm start$
+- sudo apt update
+- sudo apt upgrade -y
+- git clone https://github.com/vikasedu-github/Employee-Management-Three-Tier-JavaApp.git
+- sudo nano Employee-Management-Three-Tier-JavaApp/react-frontend/src/Services/EmployeeService.js  
+- change "Back-IP" with "LB-IP or Frontend Machine-IP"
+- Save(ctrl+X) and Exit(Enter).
+- cd Employee-Management-Three-Tier-JavaApp/react-frontend
+- under Employee-Management-Three-Tier-JavaApp/react-frontend/  
+   - sudo apt-get install npm
+- once finished installing npm then  
+   - npm i
+- once above process done then under Employee-Management-Three-Tier-JavaApp/react-frontend/
+   - sudo nano /etc/systemd/system/web.service
+- if it says folder does not exist then follow the steps mentioned under {} else skip this step  
+- {  
+   under Employee-Management-Three-Tier-JavaApp/react-frontend/  
+     - sudo mkdir etc  
+   under Employee-Management-Three-Tier-JavaApp/react-frontend/etc/  
+     - sudo mkdir systemd
+   under Employee-Management-Three-Tier-JavaApp/react-frontend/systemd/  
+     - sudo mkdir system
+   under Employee-Management-Three-Tier-JavaApp/react-frontend/systemd/system/  
+     - sudo touch web.service  
+}  
+- sudo nano /etc/systemd/system/web.service
+- if web.service file opened paste the following code
+   ```
+   [Unit]
+   Description=web
+   After=network.target
+
+   [Service]
+   User=root
+   Group=root
+   WorkingDirectory=/home/vikas/Employee-Management-Three-Tier-JavaApp/react-frontend/
+   ExecStart=npm start
+   Restart=always
+
+   [Install]
+   WantedBy=multi-user.target
+   ```  
+- then save(ctrl+X) and exit(Enter).
+- sudo chmod ugo+rwx /etc/systemd/system/web.service
+- sudo systemctl start web.service
+- sudo systemctl enable web.service
+- sudo systemctl status web.service
+- ss -nltp   
+    
+now you can see app port on which it is up.  
