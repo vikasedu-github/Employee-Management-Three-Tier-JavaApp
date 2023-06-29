@@ -81,7 +81,7 @@
 - sudo systemctl start app.service
 - sudo systemctl enable app.service
 - sudo systemctl status app.service
-- ss -nltp
+- ss -nltp OR ss -lntu
 
 now you can see app port on which it is up.
 
@@ -144,7 +144,7 @@ now you can see app port on which it is up.
 - sudo systemctl start web.service
 - sudo systemctl enable web.service
 - sudo systemctl status web.service
-- ss -nltp   
+- ss -nltp OR ss -lntu  
     
 now you can see app port on which it is up.  
 
