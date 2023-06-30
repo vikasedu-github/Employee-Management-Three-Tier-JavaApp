@@ -30,6 +30,7 @@
   spring.datasource.url= jdbc:mysql://"db-endpoint":3306/kube?useSSL=false
   spring.datasource.username= tom
   spring.datasource.password= root
+  server.port=8080
   spring.jpa.properties.hibernate.dialect= org.hibernate.dialect.MySQL5InnoDBDial>
   #Hibernate ddl auto (create, create-drop, validate, update)
   spring.jpa.hibernate.ddl-auto= update
